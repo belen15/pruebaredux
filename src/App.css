@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+/*background-image: url(./images3.jpg);*/
+background-repeat: no-repeat;
+background-size: cover;
+}
+.App {
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  width: 45%;
+  margin: 8% auto;
+  background: rgba(243, 243, 243, 0.7)
+  
+ 
+
+}
+
+.input{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  
+  
+}
+
+.reset{
+  font-size: 16px;
+  margin: 30px;
+  padding: 8px 16px;
+  background: rgba(243, 243, 243, 0.4);
+  /*background:#0068d8;*/
+  color: #22963d;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  cursor: pointer;
+   transition: 0.5s;
+  box-shadow: 0px 0px 0px 0.5px rgb(52, 158, 43);
+ 
+}
+.reset:hover{
+  background: #28a745;
+  color: #fff;
+ 
+}
+
+.llamada{
+  font-size: 12px;
+  font-style: italic;
+}

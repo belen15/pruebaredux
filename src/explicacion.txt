@@ -1,0 +1,145 @@
+diccionario = {
+  a: 1,
+  b: "string",
+  c: "hola",
+  5: 9
+}
+
+array = [1, "string", "hola"]
+
+d[5]
+
+a[0]
+
+1- INSTALACION DE REDUX:
+npm install react-redux
+
+/VER LAS OTRAS DOS/
+
+2- CREAR STORE
+import { createStore } from 'redux';
+
+3-conectar la app con el STORE:
+en el index.js
+import { Provider } from 'react-redux';
+import store from './store'
+
+ <Provider store={store}>
+      <App />
+    </Provider>
+
+en el store.js:
+export default store;
+
+
+4- crear un reducer : 
+
+function PlazofijoReducer(state = 0, action) {
+  switch (action.type) {
+    case 'SETPLAZOFIJO':
+      return action.val
+    default:
+      return state;
+  }
+}
+
+5- conectar el reducer con el store en store.js
+let store = createStore(PlazofijoReducer);
+
+6- en los componentes para llamar a un valor:
+import { useSelector } from 'react-redux'
+
+const Header = () => {
+  const Plazofijo = useSelector(state => state)
+  return (
+    <div>
+      header
+      Total: {Plazofijo}
+    </div>
+  )
+}
+
+el useSelector es para llamar a un valor (getter), que va a traer como valor el estado definido en el store
+ lo guardo en una variable llamada Plazofijo y despues llamo ese valor en el html
+
+7- en otro componente para modificar el valor
+
+import { useSelector, useDispatch } from 'react-redux'
+
+const Main = () => {
+  const Plazofijo = useSelector(state => state)
+  const p = useDispatch()
+  return (
+    <div>
+      main
+      <input value={Plazofijo} onChange={i => p({ type: "SETPLAZOFIJO", val: i.target.value})}/>
+      
+    </div>
+  )
+}
+
+export default Main
+
+primero tengo que hacer lo mismo que en el componente anterior, es decir llamar al valor con useSelector (getter)
+despues tengo que definir una nueva variable que va a modificar ese valor (setter) que se hace con useDispatch
+en el html, el imput va a tener un value = plazo fijo, es decir el valor inicial sera el valor que hay en el store
+y para modificar ese valor lo hacemos con onChange , que si o si tiene que tener un diccionario con el TYPE = *valor que esta en el case del reducer* (paso 4 fila 26)
+y un val (esta palabra es asi porque esta definida de esta forma en el return del paso 4 fila 27). La i puede reemplazarse por calquier palabra, en ambos lados del onChange
+
+
+--------------------------------------------------------------------------------------------------------
+
+8- ACTIONS
+en redux los eventos se llaman actions
+ver programacion orientada A OBJETOS
+
+Lo que hacemos es crear un evento (action) para simplificar el codigo del input 
+"<input value={Plazofijo} onChange={i => p({ type: "SETPLAZOFIJO", val: i.target.value})}/>"
+
+el action va a contener el diccionario con el type y el val.
+
+PASOS
+- creamos un archivo js con una accion que es igual a una funcion anonima 
+- le asignamos un parametro para poder utilizarlo en el archivo del input,
+- Va a devolver un diccionario que contiene valores llave que apunta a un valor
+- obligatoriamente devuelve un type  y un valor (que son valor llave o "key") qye apunta a un valor
+
+
+    const ActionUno = b => { *paso 1 y 2: definir action y parametro*
+      
+      return { *paso 3: devuelve un diccionario *
+        type: "holis", *paso 4: type-valor llave de tipo string que apunta a un valor string* 
+        valor1: b *paso 4: valor1 es un valor llave de tipo numerico que apunta a un valor de tipo desconocido por ser un parametro*
+      }
+        
+    }
+
+    export {ActionUno}; //no pongo defaul porque eso se uso cuando se va a exportar a un solo componente
+
+TENER EN CUENTA: El valor de TYPE (holis) y el valor llave valor1 debe coincidir con el store (en el case y el return)
+
+
+function InteresReducer(state = 0, action) {
+  switch (action.type) {
+    case 'holis':
+      return action.valor1
+
+9- ASIGNAR EL ACTION A LA FUNCION
+
+- En vez de asignarlo en el onChange, creo una funcion y que el onChange la llame. De esta forma pasamos de:
+"<input value={Plazofijo} onChange={i => p({ type: "SETPLAZOFIJO", val: i.target.value})}/>"
+a:
+"<input value={Plazofijo} onChange={i => mifuncion(x)/>"
+
+y la funcion la defino arriba
+
+  const martin = useCallback((p) => {
+        dispatcher(ActionUno(p.target.value)) *paso 1*
+    }, [dispatcher, ActionUno]) *paso 2*
+
+paso 1: mi dispatcher es el setter de intereses, que va a llamar al evento que creamos y tiene que tener el parametro.target.value
+
+paso 2: como son elementros de afuera, no definidos en esta funcion tienen que estar en el segundo elemento del useCallback
+
+En resumen: De esta forma dividi mi on change en 3 partes: el onChange que llama a una funcion, la funcion que me da el setter que llama al evento y define el valor, y el evento que devuelve el type y el val
+    
