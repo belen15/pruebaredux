@@ -56,3 +56,13 @@ background-size: cover;
   font-size: 12px;
   font-style: italic;
 }
+
+.resultados{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.resultado-parcial{
+  font-size: 18px;
+}

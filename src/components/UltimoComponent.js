@@ -14,11 +14,11 @@ const UltimoComponent = () => {
 
  
   return (
-    <div>
+    <div className="resultado-parcial">
       Ultimo: 
-      <ul> Capital: {ultimo.capital}</ul>
-      <ul>Interes: {ultimo.interes}</ul>
-      <ul>Plazo: {ultimo.plazo}</ul
+      <ul> Ultimo Capital: {ultimo.capital}</ul>
+      <ul>Ultimo Interes: {ultimo.interes}</ul>
+      <ul>Ultimo Plazo: {ultimo.plazo}</ul
       >
       <br/>
      </div>
