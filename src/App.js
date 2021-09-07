@@ -15,6 +15,7 @@ import ImagenFondo from './images3.jpg';
 import MaximoComponent from './components/MaximoComponent';
 import MinimoComponent from './components/MinimoComponent';
 import ContadorComponent from './components/ContadorComponent';
+import SumaComponent from './components/SumaComponent';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
          
          
          <ContadorComponent/>
+         <SumaComponent/>
          
         </div>
       </Parallax>
