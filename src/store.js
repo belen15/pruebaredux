@@ -92,6 +92,16 @@ function MinimoReducer(state = {}, action) {
   }
 }
 
+function ContadorReducer(state = 0, action) {
+  switch (action.type) {
+    case 'guardar-ultimo': //holis es el evento
+      return state +1 
+    
+    default:
+      return state;
+  }
+}
+
 
 //llamar a cada uno de los reducer
 let store = createStore(combineReducers({
@@ -100,7 +110,8 @@ let store = createStore(combineReducers({
   PlazoReducer,
   UltimoReducer,
   MaximoReducer,
-  MinimoReducer
+  MinimoReducer,
+  ContadorReducer
 }));
 
 store.subscribe(() => {

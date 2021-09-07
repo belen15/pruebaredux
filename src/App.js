@@ -14,6 +14,7 @@ import { Parallax } from 'react-parallax';
 import ImagenFondo from './images3.jpg';
 import MaximoComponent from './components/MaximoComponent';
 import MinimoComponent from './components/MinimoComponent';
+import ContadorComponent from './components/ContadorComponent';
 
 function App() {
   return (
@@ -29,10 +30,13 @@ function App() {
             <ResetComponent />
             <GuardarComponent />
           </div>
+   
+          <UltimoComponent />
+          <MaximoComponent />
+          <MinimoComponent />
          
-          <UltimoComponent/>
-         <MaximoComponent/>
-         <MinimoComponent/>
+         
+         <ContadorComponent/>
          
         </div>
       </Parallax>
