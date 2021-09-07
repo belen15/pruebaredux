@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 
 import { useDispatch } from 'react-redux'
-import {ActionReset} from '../actions/actions';
+import {ActionReset} from '../actions/ActionReset';
 
 
 const ResetComponent = () => {
@@ -14,7 +14,7 @@ const ResetComponent = () => {
 
   return (
     <div>
-      <button className="reset" onClick={()=> mifuncion()}>Reset</button>
+      <button className="botones" onClick={()=> mifuncion()}>Reset</button>
     </div>
   )
 }

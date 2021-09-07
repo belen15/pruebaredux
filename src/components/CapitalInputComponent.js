@@ -1,7 +1,7 @@
 import React, {useCallback } from 'react'
 import NumberFormat from "react-number-format";
 import { useSelector, useDispatch } from 'react-redux'
-import {ActionCapital} from '../actions/actions';
+import {ActionCapital} from '../actions/ActionCapital';
 
 const CapitalInputComponent = () => {
   const capital = useSelector(state => state.CapitalReducer)

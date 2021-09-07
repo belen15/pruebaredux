@@ -27,7 +27,12 @@ background-size: cover;
   
 }
 
-.reset{
+.botones-component{
+  display: flex;
+  justify-content: center;
+}
+
+.botones{
   font-size: 16px;
   margin: 30px;
   padding: 8px 16px;

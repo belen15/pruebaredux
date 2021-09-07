@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import NumberFormat from "react-number-format";
-import {ActionInteres} from '../actions/actions'
+import {ActionInteres} from '../actions/ActionInteres'
 
 const InteresInputComponent = () => {
   const intereses = useSelector(state => state.InteresesReducer);
