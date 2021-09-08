@@ -13,12 +13,15 @@ import MaximoComponent from './components/MaximoComponent';
 import MinimoComponent from './components/MinimoComponent';
 import ContadorComponent from './components/ContadorComponent';
 import SumaComponent from './components/SumaComponent';
+import NombreInputComponent from './components/NombreInputComponent';
+import NombreComponent from './components/NombreComponent';
 
 function App() {
   return (
 
       <Parallax bgImage={ ImagenFondo } strength={700}>
         <div style={{height: 900}} className="App">
+          <NombreInputComponent/>
           <CapitalInputComponent />
           <CapitalComponent />
           <InteresComponent />
@@ -35,6 +38,7 @@ function App() {
         </div>
           <ContadorComponent/>
           <SumaComponent/>
+          <NombreComponent/>
          
         </div>
       </Parallax>

@@ -115,6 +115,17 @@ function SumaReducer(state = { plazo: 0, capital: 0, interes: 0 }, action) {
   }
 }
 
+function NombreReducer(state = "", action) {
+  switch (action.type) {
+    case 'nombre': //holis es el evento
+      return action.nom 
+    case 'guardar-ultimo':
+      return ""
+    default:
+      return state;
+  }
+}
+
 
 
 //llamar a cada uno de los reducer
@@ -126,7 +137,8 @@ let store = createStore(combineReducers({
   MaximoReducer,
   MinimoReducer,
   ContadorReducer,
-  SumaReducer
+  SumaReducer,
+  NombreReducer
 }));
 
 store.subscribe(() => {
