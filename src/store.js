@@ -1,6 +1,7 @@
 //primero importar redux
 import { createStore, combineReducers } from 'redux';
-
+import UltimoReducer from './reducers/ultimoreducer';
+import NombreReducer from './reducers/NombreReducer';
 //Segundo definir los reducer, que son igualmes a funciones, que tienen un state y action
 //definicion de reducer
 function CapitalReducer(state = 0, action) {
@@ -43,20 +44,20 @@ function PlazoReducer(state = 0, action) {
 }
 
 //definicion de reducer
-function UltimoReducer(state = {}, action) {
-  switch (action.type) {
-    case 'guardar-ultimo':
-      return {
-        plazo: action.p,
-        capital: action.c,
-        interes: action.i,
-      }
-    case 'borrar-ultimo':
-      return {}
-    default:
-      return state;
-  }
-}
+//function UltimoReducer(state = {}, action) { //devuelve como valor inicial un diccionario VACIO
+ // switch (action.type) {
+   // case 'guardar-ultimo': //cuando se ejecuta este evento (action)
+     // return {//reemplaza el state con el nnuevo valor que sera, en este caso, otro diccionario 
+       // plazo: action.p, //plazo sera igual al valor que se pasa en el action.p
+        //capital: action.c,
+        //interes: action.i,
+      //}
+    //case 'borrar-ultimo': //cuando se ejecuta este evento
+     // return {} // devuelve un diccionaario vacio
+    //default:
+    //  return state;
+  //}
+//}
 
 
 //definicion de reducer
@@ -110,17 +111,6 @@ function SumaReducer(state = { plazo: 0, capital: 0, interes: 0 }, action) {
         capital: state.capital + action.c,
         interes: state.interes + action.i,
       }
-    default:
-      return state;
-  }
-}
-
-function NombreReducer(state = "", action) {
-  switch (action.type) {
-    case 'nombre': //holis es el evento
-      return action.nom 
-    case 'guardar-ultimo':
-      return ""
     default:
       return state;
   }

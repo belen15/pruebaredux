@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import NumberFormat from "react-number-format";
-import { ActionPlazo } from '../actions/ActionPlazo'
+import { ActionPlazo } from '../actions/ActionPrestamos'
 
 const PlazoInputComponent = () => {
   const plazo = useSelector(state => state.PlazoReducer);

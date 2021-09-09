@@ -12,3 +12,5 @@ const ActionNombre = b => {//defino una action que es igual a una funcion anonim
 
 export { ActionNombre };
 
+// este evento me guarda el valor ingresado en el input en el state
+

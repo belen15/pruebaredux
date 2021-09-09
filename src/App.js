@@ -19,30 +19,28 @@ import NombreComponent from './components/NombreComponent';
 function App() {
   return (
 
-      <Parallax bgImage={ ImagenFondo } strength={700}>
-        <div style={{height: 900}} className="App">
-          <NombreInputComponent/>
-          <CapitalInputComponent />
-          <CapitalComponent />
-          <InteresComponent />
-          <InteresInputComponent />
-          <PlazoInputComponent />
-          <div className="botones-component">
-            <ResetComponent />
-            <GuardarComponent />
-          </div>
-          <div className="resultados">
+    <Parallax bgImage={ ImagenFondo } strength={700}>
+      <div style={{height: 900}} className="App">
+        <NombreInputComponent/>
+        <CapitalInputComponent />
+        <InteresInputComponent />
+        <PlazoInputComponent />
+        <CapitalComponent />
+        <InteresComponent />
+        <div className="botones-component">
+          <ResetComponent />
+          <GuardarComponent />
+        </div>
+        <div className="resultados">
           <UltimoComponent />
           <MaximoComponent />
-          <MinimoComponent />   
+          <MinimoComponent /> 
+          <SumaComponent />
         </div>
-          <ContadorComponent/>
-          <SumaComponent/>
-          <NombreComponent/>
-         
-        </div>
-      </Parallax>
-
+        <ContadorComponent/>
+        <NombreComponent/>
+      </div>
+    </Parallax>
   );
 }
 

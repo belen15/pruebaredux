@@ -27,7 +27,7 @@ const GuardarComponent = () => {
 
   return (
     <div>
-      <button className="botones" onClick={()=> guardarPrestamo()}>Guardar</button>
+      <button className="botones guardar" onClick={()=> guardarPrestamo()}>Guardar</button>
     </div>
   )
 }

@@ -6,7 +6,7 @@ const SumaComponent = () => {
 
 
   return (
-    <div>
+    <div className="resultado-parcial">
       Suma de prestamos:
       <ul>capital: {suma.capital}</ul>
       <ul>Intereses: {suma.interes}</ul>
