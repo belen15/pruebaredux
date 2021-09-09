@@ -16,6 +16,7 @@ import SumaComponent from './components/SumaComponent';
 import NombreInputComponent from './components/NombreInputComponent';
 import NombreComponent from './components/NombreComponent';
 import LocoComponent from './components/LocoComponent';
+import GuardarDobleComponent from './components/GuardarDobleComponent';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <div className="botones-component">
           <ResetComponent />
           <GuardarComponent />
+          <GuardarDobleComponent/>
         </div>
         <div className="resultados">
           <UltimoComponent />
