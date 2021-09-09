@@ -2,6 +2,7 @@
 import { createStore, combineReducers } from 'redux';
 import UltimoReducer from './reducers/ultimoreducer';
 import NombreReducer from './reducers/NombreReducer';
+import LocoReducer from './reducers/locoreducer';
 //Segundo definir los reducer, que son igualmes a funciones, que tienen un state y action
 //definicion de reducer
 function CapitalReducer(state = 0, action) {
@@ -128,7 +129,8 @@ let store = createStore(combineReducers({
   MinimoReducer,
   ContadorReducer,
   SumaReducer,
-  NombreReducer
+  NombreReducer,
+  LocoReducer
 }));
 
 store.subscribe(() => {

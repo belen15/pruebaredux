@@ -15,6 +15,7 @@ import ContadorComponent from './components/ContadorComponent';
 import SumaComponent from './components/SumaComponent';
 import NombreInputComponent from './components/NombreInputComponent';
 import NombreComponent from './components/NombreComponent';
+import LocoComponent from './components/LocoComponent';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         </div>
         <div className="resultados">
           <UltimoComponent />
+          <LocoComponent/>
           <MaximoComponent />
           <MinimoComponent /> 
           <SumaComponent />
