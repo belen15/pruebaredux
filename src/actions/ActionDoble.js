@@ -24,5 +24,7 @@ const DividirAction = () => {
   }
 }
 
+
+
 export  { DobleAction, TripleAction , DividirAction}
 

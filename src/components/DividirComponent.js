@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { DividirAction } from '../actions/ActionDoble';
 
 
 const DividirComponent = () => {
+  const ultimo = useSelector(state => state.UltimoReducer)
   const dispatcher = useDispatch()
   //const capital = useSelector(state => state.CapitalReducer)
   //const plazo = useSelector(state => state.PlazoReducer)
@@ -20,6 +21,7 @@ const DividirComponent = () => {
 
   }, [dispatcher, DividirAction])
 
+  if (!ultimo.capital) return null
   return (
     <div>
       <button className="botones guardar" onClick={() => DividirCapitalPlazo()}>Dividir capital y plazo</button>

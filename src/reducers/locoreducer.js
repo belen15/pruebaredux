@@ -30,6 +30,13 @@ function LocoReducer(state = {}, action) { //devuelve como valor inicial un dicc
         plazo: (state.plazo) /2,
         capital: (state.capital) /2
       }
+
+    case 'holis':
+      return {
+        ...state,
+        capital: (Math.random())
+      }
+    
     case 'borrar-ultimo': //cuando se ejecuta este evento
       return {} // devuelve un diccionaario vacio
     default:

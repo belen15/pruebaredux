@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { TripleAction } from '../actions/ActionDoble';
 
 
 const TripleInteresComponent = () => {
+  const ultimo = useSelector(state => state.UltimoReducer)
   const dispatcher = useDispatch()
   //const capital = useSelector(state => state.CapitalReducer)
   //const plazo = useSelector(state => state.PlazoReducer)
@@ -19,7 +20,7 @@ const TripleInteresComponent = () => {
     dispatcher(TripleAction()) //emitiendo un evento, que esta encapsulacdo en el action
 
   }, [dispatcher, TripleAction])
-
+  if (!ultimo.capital) return null
   return (
     <div>
       <button className="botones guardar" onClick={() => guardarTripleInteres()}>Guardar Triple Interes</button>
