@@ -18,6 +18,7 @@ import NombreComponent from './components/NombreComponent';
 import LocoComponent from './components/LocoComponent';
 import GuardarDobleComponent from './components/GuardarDobleComponent';
 import TripleInteresComponent from './components/TripleInteresComponent';
+import DividirComponent from './components/DividirComponent';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <GuardarComponent />
           <GuardarDobleComponent/>
           <TripleInteresComponent/>
+          <DividirComponent/>
         </div>
         <div className="resultados">
           <UltimoComponent />

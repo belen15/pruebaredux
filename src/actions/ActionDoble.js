@@ -16,5 +16,13 @@ const TripleAction = () => {
   }
 }
 
-export  { DobleAction, TripleAction }
+
+const DividirAction = () => {
+  return {
+    type: "dividir-capital-plazo",
+
+  }
+}
+
+export  { DobleAction, TripleAction , DividirAction}
 
