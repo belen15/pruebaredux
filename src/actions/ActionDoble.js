@@ -1,4 +1,4 @@
-// en redux los eventos se llaman actions
+// en redux los eventos se encuentran encapsulados en el actions, el asction es una clase.
 const DobleAction = () => {
   return {
     type: "guardar-doble",
@@ -6,5 +6,15 @@ const DobleAction = () => {
   }
 }
 
-export { DobleAction }
+
+
+// en redux los eventos se encuentran encapsulados en el actions, el asction es una clase.
+const TripleAction = () => {
+  return {
+    type: "guardar-triple",
+
+  }
+}
+
+export  { DobleAction, TripleAction }
 

@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import {GuardarUltimoAction} from '../actions/GuardarUltimoAction';
+import {UltimoAction} from '../actions/UltimoAction';
 
 
 const GuardarComponent = () => {
@@ -17,13 +17,13 @@ const GuardarComponent = () => {
   const guardarPrestamo = useCallback (() => {
     //dispatcher({type: 'holis', valor1: 0})
     console.log(capital)
-    dispatcher(GuardarUltimoAction(capital, interes, plazo))
+    dispatcher(UltimoAction(capital, interes, plazo))
     //dispatcher(GuardarMaximoAction(capital, interes, plazo))
     //if (TotalInteres >= interes) {
     //  dispatcher(GuardarMaximoAction(capital, interes, plazo))
     //  console.log(TotalInteres)}
       
-  },[dispatcher, GuardarUltimoAction,  capital, interes, plazo, TotalInteres])
+  },[dispatcher, UltimoAction,  capital, interes, plazo, TotalInteres])
 
   return (
     <div>

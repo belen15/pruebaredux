@@ -17,6 +17,7 @@ import NombreInputComponent from './components/NombreInputComponent';
 import NombreComponent from './components/NombreComponent';
 import LocoComponent from './components/LocoComponent';
 import GuardarDobleComponent from './components/GuardarDobleComponent';
+import TripleInteresComponent from './components/TripleInteresComponent';
 
 function App() {
   return (
@@ -33,16 +34,18 @@ function App() {
           <ResetComponent />
           <GuardarComponent />
           <GuardarDobleComponent/>
+          <TripleInteresComponent/>
         </div>
         <div className="resultados">
           <UltimoComponent />
-          <LocoComponent/>
+          
           <MaximoComponent />
           <MinimoComponent /> 
           <SumaComponent />
         </div>
         <ContadorComponent/>
         <NombreComponent/>
+        <LocoComponent />
       </div>
     </Parallax>
   );

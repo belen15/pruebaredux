@@ -6,12 +6,22 @@ function LocoReducer(state = {}, action) { //devuelve como valor inicial un dicc
         capital: action.c,
         interes: action.i,
       }
-    case 'guardar-doble':
+    case 'guardar-doble': // ESTA ESCUCHANDO AL EVENTO GUARDAR-DOBLE ENCAPSULADO EN EL ACTION
       return {
-        plazo: state.plazo,
+        // iguales
+        // plazo: state.plazo,
+        // interes: state.interes,
+        ...state,
+
+        // nuevos
         capital: (state.capital)*2,
-        interes: state.interes
       }
+    case 'guardar-triple':
+        return {
+          ...state,
+
+          interes: (state.interes)*3,
+        }
     case 'borrar-ultimo': //cuando se ejecuta este evento
       return {} // devuelve un diccionaario vacio
     default:

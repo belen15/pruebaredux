@@ -1,5 +1,5 @@
 // en redux los eventos se llaman actions
-const GuardarUltimoAction = (capital, interes, plazo) => {
+const UltimoAction = (capital, interes, plazo) => {
   return {
     type: "guardar-ultimo",
     c: capital,
@@ -8,6 +8,6 @@ const GuardarUltimoAction = (capital, interes, plazo) => {
   }
 }
 
-export { GuardarUltimoAction}
+export { UltimoAction}
 
 // Este action es un evento que cuando se ejecute genera un diccionario con valores pasados por parametro.

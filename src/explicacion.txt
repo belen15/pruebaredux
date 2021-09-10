@@ -142,4 +142,7 @@ paso 1: mi dispatcher es el setter de intereses, que va a llamar al evento que c
 paso 2: como son elementros de afuera, no definidos en esta funcion tienen que estar en el segundo elemento del useCallback
 
 En resumen: De esta forma dividi mi on change en 3 partes: el onChange que llama a una funcion, la funcion que me da el setter que llama al evento y define el valor, y el evento que devuelve el type y el val
-    
+
+-------------------------------------------------------------------------------------------------------
+
+En OOP ultilizamos getter y setter, pero en programacion orientada a evemtos ( EOP) ESCUCHAMOS (DESDE EL REDUCER) o EMITIMOS(desde el componente) UN EVENTO, ENCAPSULADO EN EL ACTION

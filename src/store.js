@@ -1,125 +1,17 @@
 //primero importar redux
 import { createStore, combineReducers } from 'redux';
-import UltimoReducer from './reducers/ultimoreducer';
+import UltimoReducer from './reducers/UltimoReducer';
 import NombreReducer from './reducers/NombreReducer';
-import LocoReducer from './reducers/locoreducer';
-//Segundo definir los reducer, que son igualmes a funciones, que tienen un state y action
-//definicion de reducer
-function CapitalReducer(state = 0, action) {
-  switch (action.type) {
-    case 'holis': //holis es el evento
-      return action.valor1 ? action.valor1 : 0
-    case 'guardar-ultimo':
-      return 0
-    default:
-      return state;
-  }
-}
-
-//definicion de reducer
-function InteresesReducer(state = 0, action) {
-  switch (action.type) {
-    case 'lluvia':
-      return action.paraguas || 0
-    case 'holis':
-      return 0
-    case 'guardar-ultimo':
-      return 0
-    default:
-      return state;
-  }
-}
-
-//definicion de reducer
-function PlazoReducer(state = 0, action) {
-  switch (action.type) {
-    case 'plazo':
-      return action.dias || 0
-    case 'holis':
-      return 0
-    case 'guardar-ultimo':
-      return 0
-    default:
-      return state;
-  }
-}
-
-//definicion de reducer
-//function UltimoReducer(state = {}, action) { //devuelve como valor inicial un diccionario VACIO
- // switch (action.type) {
-   // case 'guardar-ultimo': //cuando se ejecuta este evento (action)
-     // return {//reemplaza el state con el nnuevo valor que sera, en este caso, otro diccionario 
-       // plazo: action.p, //plazo sera igual al valor que se pasa en el action.p
-        //capital: action.c,
-        //interes: action.i,
-      //}
-    //case 'borrar-ultimo': //cuando se ejecuta este evento
-     // return {} // devuelve un diccionaario vacio
-    //default:
-    //  return state;
-  //}
-//}
+import LocoReducer from './reducers/LocoReducer';
+import CapitalReducer from './reducers/CapitalReducer';
+import InteresesReducer from './reducers/InteresesReducer';
+import PlazoReducer from './reducers/PlazoReducer';
+import MaximoReducer from './reducers/MaximoReducer';
+import MinimoReducer from './reducers/MinimoReducer';
+import ContadorReducer from './reducers/ContadorReducer'
+import SumaReducer from './reducers/SumaReducer';
 
 
-//definicion de reducer
-function MaximoReducer(state = {}, action) {
-  switch (action.type) {
-    case 'guardar-ultimo':
-      if (!state.capital || state.capital * state.plazo * state.interes /100 / 360 < action.c * action.p * action.i /100 /360) {
-        return {
-          plazo: action.p,
-          capital: action.c,
-          interes: action.i,
-        }
-      }
-      return state
-    default:
-      return state;
-  }
-}
-
-function MinimoReducer(state = {}, action) {
-  switch (action.type) {
-    case 'guardar-ultimo':
-      if (!state.capital || state.capital * state.plazo * state.interes / 100 / 360 > action.c * action.p * action.i / 100 / 360) {
-        return {
-          plazo: action.p,
-          capital: action.c,
-          interes: action.i,
-        }
-      }
-      return state
-    default:
-      return state;
-  }
-}
-
-function ContadorReducer(state = 0, action) {
-  switch (action.type) {
-    case 'guardar-ultimo': //holis es el evento
-      return state +1 
-    
-    default:
-      return state;
-  }
-}
-
-function SumaReducer(state = { plazo: 0, capital: 0, interes: 0 }, action) {
-  switch (action.type) {
-    case 'guardar-ultimo':
-      return {
-        plazo: state.plazo + action.p,
-        capital: state.capital + action.c,
-        interes: state.interes + action.i,
-      }
-    default:
-      return state;
-  }
-}
-
-
-
-//llamar a cada uno de los reducer
 let store = createStore(combineReducers({
   CapitalReducer,
   InteresesReducer,

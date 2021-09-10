@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 
 import { useDispatch } from 'react-redux'
-import {ActionReset} from '../actions/ActionReset';
+import {ActionReset} from '../actions/ActionPrestamos';
 
 
 const ResetComponent = () => {
