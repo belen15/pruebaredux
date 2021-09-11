@@ -15,8 +15,14 @@ function PlazosReducer(state = [], action) {
   switch (action.type) {
     case 'guardar-ultimo':
       const n = [...state]
-      if (action.p >= 10 ){
-      n.push(action.p)}
+      if (action.p == 23) {
+       
+      } else if (action.p >= 20) {
+        n.push(action.p)
+        n.push(action.p)
+      } else if (action.p >= 10 ){
+        n.push(action.p)
+      } 
       return n
     default:
       return state;
