@@ -11,4 +11,16 @@ function PlazoReducer(state = 0, action) {
   }
 }
 
-export default PlazoReducer
+function PlazosReducer(state = [], action) {
+  switch (action.type) {
+    case 'guardar-ultimo':
+      const n = [...state]
+      if (action.p >= 10 ){
+      n.push(action.p)}
+      return n
+    default:
+      return state;
+  }
+}
+
+export { PlazoReducer , PlazosReducer }

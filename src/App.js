@@ -21,6 +21,7 @@ import TripleInteresComponent from './components/TripleInteresComponent';
 import DividirComponent from './components/DividirComponent';
 import ListaCapitalComponent from './components/ListaCapitalComponent';
 import ListaInteresComponent from './components/ListaInteresesComponent';
+import ListaPlazosComponent from './components/ListaPlazosComponents';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <NombreComponent/>
         <ListaCapitalComponent/>
         <ListaInteresComponent/>
+        <ListaPlazosComponent/>
         <LocoComponent />
 
       </div>

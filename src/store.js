@@ -5,7 +5,7 @@ import NombreReducer from './reducers/NombreReducer';
 import LocoReducer from './reducers/LocoReducer';
 import { CapitalReducer, CapitalesReducer } from './reducers/CapitalReducer';
 import { InteresesReducer, InteresReducer} from './reducers/InteresesReducer';
-import PlazoReducer from './reducers/PlazoReducer';
+import { PlazoReducer , PlazosReducer } from './reducers/PlazoReducer';
 import MaximoReducer from './reducers/MaximoReducer';
 import MinimoReducer from './reducers/MinimoReducer';
 import ContadorReducer from './reducers/ContadorReducer'
@@ -24,7 +24,8 @@ let store = createStore(combineReducers({
   NombreReducer,
   LocoReducer, 
   CapitalesReducer,
-  InteresReducer
+  InteresReducer,
+  PlazosReducer
 }));
 
 store.subscribe(() => {

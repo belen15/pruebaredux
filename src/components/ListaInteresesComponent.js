@@ -7,7 +7,7 @@ const ListaInteresComponent = () => {
   return (
     <div className="resultado-parcial">
       Intereses:
-      <ul>Array de capitales:
+      <ul>Array de intereses:
         {lista.map((interes, index) =>
           <span key={index}>{interes} - </span>)}
       </ul>
