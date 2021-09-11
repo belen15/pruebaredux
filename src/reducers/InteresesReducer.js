@@ -11,4 +11,16 @@ function InteresesReducer(state = 0, action) {
   }
 }
 
-export default InteresesReducer
+function InteresReducer(state = [], action) {
+  switch (action.type) {
+    case 'guardar-ultimo':
+      const n = [...state]
+      n.push(action.i)
+      return n
+    default:
+      return state;
+  }
+}
+
+
+export { InteresesReducer, InteresReducer }

@@ -3,8 +3,8 @@ import { createStore, combineReducers } from 'redux';
 import UltimoReducer from './reducers/UltimoReducer';
 import NombreReducer from './reducers/NombreReducer';
 import LocoReducer from './reducers/LocoReducer';
-import CapitalReducer from './reducers/CapitalReducer';
-import InteresesReducer from './reducers/InteresesReducer';
+import { CapitalReducer, CapitalesReducer } from './reducers/CapitalReducer';
+import { InteresesReducer, InteresReducer} from './reducers/InteresesReducer';
 import PlazoReducer from './reducers/PlazoReducer';
 import MaximoReducer from './reducers/MaximoReducer';
 import MinimoReducer from './reducers/MinimoReducer';
@@ -22,7 +22,9 @@ let store = createStore(combineReducers({
   ContadorReducer,
   SumaReducer,
   NombreReducer,
-  LocoReducer
+  LocoReducer, 
+  CapitalesReducer,
+  InteresReducer
 }));
 
 store.subscribe(() => {

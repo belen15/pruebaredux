@@ -9,4 +9,15 @@ function CapitalReducer(state = 0, action) {
   }
 }
 
-export default CapitalReducer
+function CapitalesReducer(state = [], action) {
+  switch (action.type) {
+    case 'guardar-ultimo':
+      const n = [...state]
+      n.push(action.c)
+      return n
+    default:
+      return state;
+  }
+}
+
+export { CapitalReducer, CapitalesReducer }

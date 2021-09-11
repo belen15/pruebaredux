@@ -19,6 +19,8 @@ import LocoComponent from './components/LocoComponent';
 import GuardarDobleComponent from './components/GuardarDobleComponent';
 import TripleInteresComponent from './components/TripleInteresComponent';
 import DividirComponent from './components/DividirComponent';
+import ListaCapitalComponent from './components/ListaCapitalComponent';
+import ListaInteresComponent from './components/ListaInteresesComponent';
 
 function App() {
   return (
@@ -47,7 +49,10 @@ function App() {
         </div>
         <ContadorComponent/>
         <NombreComponent/>
+        <ListaCapitalComponent/>
+        <ListaInteresComponent/>
         <LocoComponent />
+
       </div>
     </Parallax>
   );

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 const UltimoComponent = () => {
   const ultimo = useSelector(state => state.UltimoReducer)
-  const maximo = useSelector(state => state.MaximoReducer)
+  const lista = useSelector(state => state.CapitalesReducer )
   
   if (! ultimo.capital) return null
 
@@ -18,8 +18,8 @@ const UltimoComponent = () => {
       Ultimo: 
       <ul> Ultimo Capital: {ultimo.capital}</ul>
       <ul>Ultimo Interes: {ultimo.interes}</ul>
-      <ul>Ultimo Plazo: {ultimo.plazo}</ul
-      >
+      <ul>Ultimo Plazo: {ultimo.plazo}</ul>
+      
       <br/>
      </div>
   )
