@@ -8,6 +8,6 @@ const UltimoAction = (capital, interes, plazo) => {
   }
 }
 
-export { UltimoAction}
+export { UltimoAction }
 
 // Este action es un evento que cuando se ejecute genera un diccionario con valores pasados por parametro.

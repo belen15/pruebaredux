@@ -1,27 +1,28 @@
 import './App.css';
 import CapitalInputComponent from './components/CapitalInputComponent';
-import CapitalComponent from './components/CapitalComponent';
-import InteresComponent from './components/InteresComponent';
+import CapitalComponent from './components/prestamo/CapitalComponent';
+import InteresComponent from './components/prestamo/InteresComponent';
 import InteresInputComponent from './components/InteresInputComponent';
 import ResetComponent from './components/ResetComponent';
 import PlazoInputComponent from './components/PlazoInputComponent';
 import GuardarComponent from './components/GuardarComponent';
-import UltimoComponent from './components/UltimoComponent';
+import UltimoComponent from './components/resultados/UltimoComponent';
 import { Parallax } from 'react-parallax';
 import ImagenFondo from './images3.jpg';
-import MaximoComponent from './components/MaximoComponent';
-import MinimoComponent from './components/MinimoComponent';
+import MaximoComponent from './components/resultados/MaximoComponent';
+import MinimoComponent from './components/resultados/MinimoComponent';
 import ContadorComponent from './components/ContadorComponent';
-import SumaComponent from './components/SumaComponent';
+import SumaComponent from './components/resultados/SumaComponent';
 import NombreInputComponent from './components/NombreInputComponent';
 import NombreComponent from './components/NombreComponent';
 import LocoComponent from './components/LocoComponent';
 import GuardarDobleComponent from './components/GuardarDobleComponent';
 import TripleInteresComponent from './components/TripleInteresComponent';
 import DividirComponent from './components/DividirComponent';
-import ListaCapitalComponent from './components/ListaCapitalComponent';
-import ListaInteresComponent from './components/ListaInteresesComponent';
-import ListaPlazosComponent from './components/ListaPlazosComponents';
+import ListaCapitalComponent from './components/Listas/ListaCapitalComponent';
+import ListaInteresComponent from './components/Listas/ListaInteresesComponent';
+import ListaPlazosComponent from './components/Listas/ListaPlazosComponents';
+import ListaCapitalesComponent from './components/Listas/ListaCapitalesComponent';
 
 function App() {
   return (
@@ -43,16 +44,19 @@ function App() {
         </div>
         <div className="resultados">
           <UltimoComponent />
-          
           <MaximoComponent />
           <MinimoComponent /> 
           <SumaComponent />
         </div>
         <ContadorComponent/>
         <NombreComponent/>
-        <ListaCapitalComponent/>
-        <ListaInteresComponent/>
-        <ListaPlazosComponent/>
+        <div className="listas">
+          <ListaCapitalComponent />
+          <ListaInteresComponent />
+          <ListaPlazosComponent />
+          <ListaCapitalesComponent/>
+        </div>
+        
         <LocoComponent />
 
       </div>

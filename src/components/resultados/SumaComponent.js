@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 const SumaComponent = () => {
   const suma = useSelector(state => state.SumaReducer)
 
+  if (!suma.capital) return null
 
   return (
     <div className="resultado-parcial">

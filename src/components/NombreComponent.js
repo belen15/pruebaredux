@@ -7,7 +7,7 @@ const NombreComponent = () => {
   const nombre = useSelector(state => state.NombreReducer)
 
   return (
-    <div className="input">
+    <div>
       <span>el nombre es:</span>
       {nombre}
     </div>

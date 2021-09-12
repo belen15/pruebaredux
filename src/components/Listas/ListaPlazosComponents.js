@@ -6,7 +6,7 @@ const ListaPlazosComponent = () => {
   const lista = useSelector(state => state.PlazosReducer)
   return (
     <div className="resultado-parcial">
-      Plazos:
+      <h4 className="titulo">Plazos:</h4> 
       <ul>Array de Plazos:
         {lista.map((x, index) =>
           <span key={index}>{x} - </span>)}

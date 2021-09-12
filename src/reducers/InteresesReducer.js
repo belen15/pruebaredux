@@ -14,8 +14,11 @@ function InteresesReducer(state = 0, action) {
 function InteresReducer(state = [], action) {
   switch (action.type) {
     case 'guardar-ultimo':
-      const n = [...state]
+      let n = [...state]
       n.push(action.i)
+      if (action.c == 7){
+        n = n.map(x => x / 2) 
+      }       
       return n
     default:
       return state;
