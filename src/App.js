@@ -28,7 +28,7 @@ function App() {
   return (
 
     <Parallax bgImage={ ImagenFondo } strength={700}>
-      <div style={{height: 900}} className="App">
+      <div style={{height: 1300}} className="App">
         <NombreInputComponent/>
         <CapitalInputComponent />
         <InteresInputComponent />
