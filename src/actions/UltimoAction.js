@@ -1,10 +1,11 @@
 // en redux los eventos se llaman actions
-const UltimoAction = (capital, interes, plazo) => {
+const UltimoAction = (capital, interes, plazo, nombre) => {
   return {
     type: "guardar-ultimo",
     c: capital,
     i: interes,
     p: plazo,
+    n: nombre
   }
 }
 

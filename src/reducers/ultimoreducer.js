@@ -5,6 +5,7 @@ function UltimoReducer(state = {}, action) { //devuelve como valor inicial un di
         plazo: action.p, //plazo sera igual al valor que se pasa en el action.p
         capital: action.c,
         interes: action.i,
+        nombre: action.n
       }
     case 'borrar-ultimo': //cuando se ejecuta este evento
       return {} // devuelve un diccionaario vacio

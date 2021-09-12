@@ -10,6 +10,7 @@ const GuardarComponent = () => {
   const capital = useSelector(state => state.CapitalReducer)
   const plazo = useSelector(state => state.PlazoReducer)
   const interes = useSelector(state => state.InteresesReducer)
+  const nombre =  useSelector(state => state.NombreReducer)
 
   const TotalInteres = capital * interes * plazo / 360 / 100;
 
@@ -17,13 +18,13 @@ const GuardarComponent = () => {
   const guardarPrestamo = useCallback (() => {
     //dispatcher({type: 'holis', valor1: 0})
     console.log(capital)
-    dispatcher(UltimoAction(capital, interes, plazo))
+    dispatcher(UltimoAction(capital, interes, plazo, nombre))
     //dispatcher(GuardarMaximoAction(capital, interes, plazo))
     //if (TotalInteres >= interes) {
     //  dispatcher(GuardarMaximoAction(capital, interes, plazo))
     //  console.log(TotalInteres)}
       
-  },[dispatcher, UltimoAction,  capital, interes, plazo, TotalInteres])
+  },[dispatcher, UltimoAction,  capital, interes, plazo, nombre, TotalInteres])
 
   return (
     <div>

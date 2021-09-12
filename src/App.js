@@ -23,6 +23,7 @@ import ListaCapitalComponent from './components/Listas/ListaCapitalComponent';
 import ListaInteresComponent from './components/Listas/ListaInteresesComponent';
 import ListaPlazosComponent from './components/Listas/ListaPlazosComponents';
 import ListaCapitalesComponent from './components/Listas/ListaCapitalesComponent';
+import ListaNombreComponent from './components/Listas/ListaNombreComponent';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <ListaInteresComponent />
           <ListaPlazosComponent />
           <ListaCapitalesComponent/>
+          <ListaNombreComponent/>
         </div>
         
         <LocoComponent />

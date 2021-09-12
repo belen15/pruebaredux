@@ -1,7 +1,7 @@
 //primero importar redux
 import { createStore, combineReducers } from 'redux';
 import UltimoReducer from './reducers/UltimoReducer';
-import NombreReducer from './reducers/NombreReducer';
+import { NombreReducer, ListaNombreReducer} from './reducers/NombreReducer';
 import LocoReducer from './reducers/LocoReducer';
 import { CapitalReducer, CapitalesReducer, ListaCapitalesReducer } from './reducers/CapitalReducer';
 import { InteresesReducer, InteresReducer} from './reducers/InteresesReducer';
@@ -26,7 +26,8 @@ let store = createStore(combineReducers({
   CapitalesReducer,
   InteresReducer,
   PlazosReducer,
-  ListaCapitalesReducer
+  ListaCapitalesReducer,
+  ListaNombreReducer
 }));
 
 store.subscribe(() => {

@@ -11,4 +11,21 @@ function NombreReducer(state = "", action) {
   }
 }
 
-export default NombreReducer
+function ListaNombreReducer(state= {
+  listanombre : []
+}, action){
+  switch (action.type){
+   case 'guardar-ultimo':
+     const n = [...state.listanombre]
+     n.push(action.n)
+     return {
+       ...state,
+       listanombre: n
+     }
+     default:
+      return state
+  }
+}
+  
+
+export { NombreReducer , ListaNombreReducer }
