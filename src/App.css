@@ -93,3 +93,8 @@ background-size: cover;
 .listas .titulo{
   font-weight: 600;
 }
+
+.lista-item{
+  text-decoration: none;
+  list-style: none;
+}

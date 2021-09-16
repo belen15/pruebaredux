@@ -24,7 +24,14 @@ const DividirAction = () => {
   }
 }
 
+const FiltrarCapitalAction = () => {
+  return {
+    type: "filtrar-capital",
+
+  }
+}
 
 
-export  { DobleAction, TripleAction , DividirAction}
+
+export  { DobleAction, TripleAction , DividirAction, FiltrarCapitalAction}
 

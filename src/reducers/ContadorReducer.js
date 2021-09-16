@@ -8,4 +8,4 @@ function ContadorReducer(state = 0, action) {
   }
 }
 
-export default ContadorReducer
+export { ContadorReducer }

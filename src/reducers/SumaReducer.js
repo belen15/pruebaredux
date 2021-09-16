@@ -11,4 +11,4 @@ function SumaReducer(state = { plazo: 0, capital: 0, interes: 0 }, action) {
   }
 }
 
-export default SumaReducer
+export { SumaReducer }

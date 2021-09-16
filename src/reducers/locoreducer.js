@@ -44,4 +44,4 @@ function LocoReducer(state = {}, action) { //devuelve como valor inicial un dicc
   }
 }
 
-export default LocoReducer
+export { LocoReducer }

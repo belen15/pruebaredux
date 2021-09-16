@@ -42,4 +42,5 @@ function ListaCapitalesReducer(state = {
 
 
 
+
 export { CapitalReducer, CapitalesReducer, ListaCapitalesReducer }

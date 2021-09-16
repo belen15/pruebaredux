@@ -24,6 +24,8 @@ import ListaInteresComponent from './components/Listas/ListaInteresesComponent';
 import ListaPlazosComponent from './components/Listas/ListaPlazosComponents';
 import ListaCapitalesComponent from './components/Listas/ListaCapitalesComponent';
 import ListaNombreComponent from './components/Listas/ListaNombreComponent';
+import ListaCapitalFilterComponent from './components/Listas/ListaCapitalFilterComponent';
+
 
 function App() {
   return (
@@ -43,20 +45,22 @@ function App() {
           <TripleInteresComponent/>
           <DividirComponent/>
         </div>
-        <div className="resultados">
-          <UltimoComponent />
-          <MaximoComponent />
-          <MinimoComponent /> 
-          <SumaComponent />
-        </div>
+        
         <ContadorComponent/>
         <NombreComponent/>
         <div className="listas">
           <ListaCapitalComponent />
+          <ListaCapitalFilterComponent/>
           <ListaInteresComponent />
           <ListaPlazosComponent />
           <ListaCapitalesComponent/>
           <ListaNombreComponent/>
+        </div>
+        <div className="resultados listas">
+          <UltimoComponent />
+          <MaximoComponent />
+          <MinimoComponent />
+          <SumaComponent />
         </div>
         
         <LocoComponent />

@@ -7,6 +7,8 @@ function UltimoReducer(state = {}, action) { //devuelve como valor inicial un di
         interes: action.i,
         nombre: action.n
       }
+  
+
     case 'borrar-ultimo': //cuando se ejecuta este evento
       return {} // devuelve un diccionaario vacio
     default:
@@ -14,4 +16,4 @@ function UltimoReducer(state = {}, action) { //devuelve como valor inicial un di
   }
 }
 
-export default UltimoReducer
+export { UltimoReducer }

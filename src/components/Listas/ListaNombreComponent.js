@@ -9,6 +9,7 @@ const ListaNombreComponent = () => {
       <ul> Array de nombres:
         {lista.listanombre.map((x, index) =>
           <span key={index}>{x} - </span>)}
+        <span>{lista.contador}</span>
       </ul>
 
       <br />

@@ -14,4 +14,4 @@ function MaximoReducer(state = {}, action) {
   }
 }
 
-export default MaximoReducer
+export { MaximoReducer }

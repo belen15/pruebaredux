@@ -15,4 +15,4 @@ function MinimoReducer(state = {}, action) {
   }
 }
 
-export default MinimoReducer
+export { MinimoReducer }

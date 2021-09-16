@@ -12,15 +12,18 @@ function NombreReducer(state = "", action) {
 }
 
 function ListaNombreReducer(state= {
-  listanombre : []
+  listanombre : [],
+  contador: 0
 }, action){
   switch (action.type){
    case 'guardar-ultimo':
      const n = [...state.listanombre]
      n.push(action.n)
+
      return {
        ...state,
-       listanombre: n
+       listanombre: n,
+       contador: state.contador + action.n.split(" ").length
      }
      default:
       return state
